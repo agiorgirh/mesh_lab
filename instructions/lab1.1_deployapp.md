@@ -23,7 +23,7 @@ Verify the annotation in the 'app-ui' file:
 </blockquote>
 
 ```execute
-cat config/app/app-ui-fromsource.yaml | grep -B 1 sidecar.istio.io/inject
+cat manifests/app/app-ui-fromsource.yaml | grep -B 1 sidecar.istio.io/inject
 ```
 
 Output:
