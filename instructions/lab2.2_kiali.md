@@ -9,8 +9,8 @@ Istio provides [Kiali][1], an open source project that gives you a console view 
 Ensure Kiali can view your deployments:
 
 ```execute
-oc get cm kiali -n %username%-istio -o yaml | sed '/DeploymentConfig/d' | oc apply -n %username%-istio -f -
-oc rollout restart deployment kiali -n %username%-istio
+oc get cm kiali -n user1-istio -o yaml | sed '/DeploymentConfig/d' | oc apply -n user1-istio -f -
+oc rollout restart deployment kiali -n user1-istio
 ```
 
 <br>
@@ -44,7 +44,7 @@ Now let's open the Kiali console.  Retrieve the endpoint for Kiali:
 
 
 ```execute
-echo $(oc get route kiali -n %username%-istio --template='https://{{.spec.host}}')
+echo $(oc get route kiali -n user1-istio --template='https://{{.spec.host}}')
 ```
 
 Output (sample):

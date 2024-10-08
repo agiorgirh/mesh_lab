@@ -12,7 +12,7 @@ Open the Grafana console.  Retrieve the endpoint for Grafana:
 </blockquote>
 
 ```execute
-echo $(oc get route grafana -n %username%-istio --template='https://{{.spec.host}}')
+echo $(oc get route grafana -n user1-istio --template='https://{{.spec.host}}')
 ```
 <p><i class="fa fa-info-circle"></i> Click 'Allow selected permissions' if prompted to authorized access.</p>
 
@@ -75,7 +75,7 @@ Open another tab in the terminal. Send load to the user profile service:
 </blockquote>
 
 ```execute-2
-GATEWAY_URL=$(oc get route istio-ingressgateway -n %username%-istio --template='http://{{.spec.host}}')
+GATEWAY_URL=$(oc get route istio-ingressgateway -n user1-istio --template='http://{{.spec.host}}')
 while true; do curl -s -o /dev/null $GATEWAY_URL/profile; done
 ```
 

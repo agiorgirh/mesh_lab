@@ -12,7 +12,7 @@ Open the Jaeger console. Retrieve the endpoint for Jaeger:
 </blockquote>
 
 ```execute
-echo $(oc get route jaeger -n %username%-istio --template='https://{{.spec.host}}')
+echo $(oc get route jaeger -n user1-istio --template='https://{{.spec.host}}')
 ```
 
 Click 'Allow selected permissions' if prompted to authorized access.
@@ -40,7 +40,7 @@ for ((i=1;i<=100;i++)); do curl -s -o /dev/null $GATEWAY_URL; done
 <br>
 Let's inspect the traces for your service.  
 
-On the left bar under **Search**, select `app-ui.%username%` for 'Service' and `boards-%username%.svc.cluster.local` for **Operation**.  
+On the left bar under **Search**, select `app-ui.user1` for 'Service' and `boards-user1.svc.cluster.local` for **Operation**.  
 
 It should look like this:
 
@@ -126,7 +126,7 @@ for ((i=1;i<=5;i++)); do curl -s -o /dev/null $GATEWAY_URL/profile; done
 Inspect the traces.  
 <br>
 
-On the left bar under **Search**, select `app-ui.%username%` for **Service** and `userprofile-%username%.svc.cluster.local` for 'Operation'.  
+On the left bar under **Search**, select `app-ui.user1` for **Service** and `userprofile-user1.svc.cluster.local` for 'Operation'.  
 </blockquote>
 
 <blockquote>
@@ -214,7 +214,7 @@ Open the Jaeger console. Retrieve the endpoint for Jaeger:
 </blockquote>
 
 ```execute
-echo $(oc get route jaeger -n %username%-istio --template='https://{{.spec.host}}')
+echo $(oc get route jaeger -n user1-istio --template='https://{{.spec.host}}')
 ```
 
 Click 'Allow selected permissions' if prompted to authorized access.
@@ -242,7 +242,7 @@ for ((i=1;i<=100;i++)); do curl -s -o /dev/null $GATEWAY_URL; done
 <br>
 Let's inspect the traces for your service.  
 
-On the left bar under **Search**, select `app-ui.%username%` for 'Service' and `boards-%username%.svc.cluster.local` for **Operation**.  
+On the left bar under **Search**, select `app-ui.user1` for 'Service' and `boards-user1.svc.cluster.local` for **Operation**.  
 
 It should look like this:
 
@@ -328,7 +328,7 @@ for ((i=1;i<=5;i++)); do curl -s -o /dev/null $GATEWAY_URL/profile; done
 Inspect the traces.  
 <br>
 
-On the left bar under **Search**, select `app-ui.%username%` for **Service** and `userprofile-%username%.svc.cluster.local` for 'Operation'.  
+On the left bar under **Search**, select `app-ui.user1` for **Service** and `userprofile-user1.svc.cluster.local` for 'Operation'.  
 </blockquote>
 
 <blockquote>

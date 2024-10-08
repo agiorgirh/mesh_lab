@@ -30,7 +30,7 @@ Run this command and look for outboundTrafficPolicy
 </blockquote>
 
 ```execute
-oc describe cm/istio-workshop-install -n %username%-istio | grep outboundTrafficPolicy -A 1
+oc describe cm/istio-workshop-install -n user1-istio | grep outboundTrafficPolicy -A 1
 ```
 
 Output:
@@ -46,7 +46,7 @@ Now let's verify it's working - Run this command to scrape some data:
 </blockquote>
 
 ```execute
-curl context-scraper.%username%:8080/scrape/custom_search?term==skynet | jq
+curl context-scraper.user1:8080/scrape/custom_search?term==skynet | jq
 ```
 
 We should get an output similar to the one below, with error of ECONNRESET:
@@ -147,7 +147,7 @@ Try scrape some data again:
 </blockquote>
 
 ```execute
-curl context-scraper.%username%:8080/scrape/custom_search?term==skynet | jq
+curl context-scraper.user1:8080/scrape/custom_search?term==skynet | jq
 ```
 
 Now we should get an output similar to the one below - showing results:

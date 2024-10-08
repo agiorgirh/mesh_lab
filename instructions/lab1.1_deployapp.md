@@ -150,7 +150,7 @@ Retrieve the URL of the load balancer:
 </blockquote>
 
 ```execute
-GATEWAY_URL=$(oc get route istio-ingressgateway -n %username%-istio --template='http://{{.spec.host}}')
+GATEWAY_URL=$(oc get route istio-ingressgateway -n user1-istio --template='http://{{.spec.host}}')
 echo $GATEWAY_URL
 ```
 
